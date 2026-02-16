@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block title %}Home | College Lens{% endblock %}
+
+{% block content %}
+
+{% block homepage %}{% endblock%}
+
+<section class="py-5 py-md-5">
+  <div class="row align-items-center g-5">
+
+  
+    <div class="col-md-7">
+
+      <h1 class="fw-bold display-5 mb-3">
+        Make smarter college decisions with real, structured insights.
+      </h1>
+
+      <p class="text-muted fs-5 mb-4">
+        Compare colleges using placements, fees, companies visited, hostel ratings,
+        and branch-wise details all in one place.
+      </p>
+
+      <div class="d-flex gap-2 flex-wrap">
+        <a href="/explore" class="btn btn-primary px-4 py-2">
+          Explore Colleges
+        </a>
+
+        {% if not session.get("user_id") %}
+          <a href="/signup" class="btn btn-outline-dark px-4 py-2">
+            Create Account
+          </a>
+        {% endif %}
+      </div>
+
+ 
+      <div class="row g-3 mt-2">
+        <div class="col-12 col-sm-4">
+          <div class="card border-0 shadow-sm p-3 h-100">
+            <div class="fw-bold fs-4">100+</div>
+            <div class="text-muted small">Colleges listed</div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-4">
+          <div class="card border-0 shadow-sm p-3 h-100">
+            <div class="fw-bold fs-4">Branch-wise</div>
+            <div class="text-muted small">Cutoffs + intake</div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-4">
+          <div class="card border-0 shadow-sm p-3 h-100">
+            <div class="fw-bold fs-4">Placements</div>
+            <div class="text-muted small">Year-wise trends</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="col-md-5">
+      <div class="card border-0 shadow-sm overflow-hidden">
+        <img
+          src="https://media.istockphoto.com/id/1461630610/photo/group-of-happy-students-checking-results-on-laptop-while-sitting-on-college-campus-concept-of.webp?a=1&b=1&s=612x612&w=0&k=20&c=NH10qLuxG702jHp8-GAKYxxlNHSfnnCesqib6Si2JGs="
+          class="img-fluid"
+          alt="College campus"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="mt-5 pt-5">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold">What College Lens helps you do</h2>
+    <p class="text-muted fs-6 mb-0">
+      Everything is organized for fast comparison and decision-making.
+    </p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm p-4 h-100">
+        <h5 class="fw-bold mb-2">Compare colleges quickly</h5>
+        <p class="text-muted mb-0">
+          See key information like fees, placements, and ratings without searching across multiple sites.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm p-4 h-100">
+        <h5 class="fw-bold mb-2">Understand placements clearly</h5>
+        <p class="text-muted mb-0">
+          Check year-wise placement performance, hiring companies, and overall placement strength.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm p-4 h-100">
+        <h5 class="fw-bold mb-2">Analyze branch-wise details</h5>
+        <p class="text-muted mb-0">
+          Get branch intake, cutoffs, faculty rating, and branch rating in a structured format.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-5">
+  <div class="row g-4">
+
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm p-4 h-100">
+        <h4 class="fw-bold mb-2">All key data in one dashboard</h4>
+        <p class="text-muted mb-0">
+          No messy PDFs or random college pages. College Lens keeps everything clean and easy to understand.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm p-4 h-100">
+        <h4 class="fw-bold mb-2">Built for real student decisions</h4>
+        <p class="text-muted mb-0">
+          We focus on the factors that matter: placements, fees, hostel life, and branch quality.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="mt-5">
+  <div class="card border-0 shadow-sm p-4 p-md-5">
+    <div class="row align-items-center g-3">
+      <div class="col-md-8">
+        <h3 class="fw-bold mb-2">Start exploring colleges now</h3>
+        <p class="text-muted mb-0">
+          Make your shortlist faster and choose with confidence.
+        </p>
+      </div>
+      <div class="col-md-4 text-md-end">
+        <a href="/explore" class="btn btn-dark btn-lg px-4">
+          Explore
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
